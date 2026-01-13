@@ -1,0 +1,80 @@
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+__pycache__/
+*.egg-info/
+dist/
+build/
+.Python
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+
+# Data (large files - keep structure, ignore content)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/chunks/*
+!data/chunks/.gitkeep
+
+# Models (large files)
+models/embeddings/*
+!models/embeddings/.gitkeep
+models/checkpoints/*
+!models/checkpoints/.gitkeep
+*.pt
+*.pth
+*.bin
+*.h5
+
+# Indices (generated files)
+indices/bm25/*
+!indices/bm25/.gitkeep
+indices/dense/*
+!indices/dense/.gitkeep
+indices/hybrid/*
+!indices/hybrid/.gitkeep
+
+# Results (generated files)
+results/experiments/*
+!results/experiments/.gitkeep
+results/metrics/*
+results/reports/*
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp

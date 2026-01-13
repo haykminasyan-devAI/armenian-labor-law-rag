@@ -1,0 +1,127 @@
+================================================================================
+DENSE RAG PIPELINE - 5 QUESTIONS TEST
+Retrieval: Dense (Armenian Embeddings)
+Generation: NVIDIA Llama 3.1-70B-Instruct
+Date: 2026-01-12 13:31
+================================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ՀԱՐՑ 1: Ինչ է կարգավորում Աշխատանքային օրենսգրքի 1-ին հոդվածը։
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Retrieved Articles: [216, 1, 4]
+Similarity Scores: [0.8179, 0.8154, 0.8141]
+
+ՊԱՏԱՍԽԱՆ:
+
+Աշխատանքային օրենսգրքի 1-ին հոդվածը կարգավորում է Հայաստանի Հանրապետության 
+աշխատանքային օրենսգրքով կարգավորվող հարաբերությունները (Հոդված 1)։
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ՀԱՐՑ 2: Քանի՞ արձակուրդային օր կա։
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Retrieved Articles: [160, 159, 158]
+Similarity Scores: [0.6977, 0.6952, 0.6747]
+
+ՊԱՏԱՍԽԱՆ:
+
+Հոդված 159-ի 1-ին մասի համաձայն ամենամյա նվազագույն արձակուրդի տևողությունը 
+հնգօրյա աշխատանքային շաբաթվա դեպքում 20 աշխատանքային օր է, իսկ վեցօրյա 
+աշխատանքային շաբաթվա դեպքում` 24 աշխատանքային օր:
+
+✅ Dense WINNER: Found Articles 158-160 (all about annual vacation)
+   BM25 found [115, 172, 176] (mixed relevance)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ՀԱՐՑ 3: ինչ է ասում Հոդված 159-րդը
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Retrieved Articles: [157, 177, 90]
+Similarity Scores: [0.7288, 0.7236, 0.7119]
+
+⚠️ DENSE ALSO FAILED: Did NOT retrieve Article 159!
+Instead retrieved: [157, 177, 90]
+
+ՊԱՏԱՍԽԱՆ:
+
+Հոդված 159-րդը համատեքստում չի նշվում, այդ իսկ պատճառով չեմ կարող պատասխանել 
+ձեր հարցին։ Համատեքստում նշվում են հետևյալ հոդվածները՝ 157, 177, 90:
+
+✅ LLM Correctly Identified: Article 159 not in retrieved context!
+
+Problem: BOTH BM25 and Dense failed to retrieve Article 159 directly!
+Reason: Armenian morphology "159-րդը" is challenging for both methods
+The suffix "-րդը" changes how the number is represented
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ՀԱՐՑ 4: Ինչպե՞ս է սահմանվում գործուղման օրապահիկը։
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Retrieved Articles: [209, 142, 154]
+Similarity Scores: [0.7101, 0.7071, 0.7028]
+
+ՊԱՏԱՍԽԱՆ:
+
+Գործուղման օրապահիկի նվազագույն չափը եւ կարգը սահմանում է Հայաստանի 
+Հանրապետության կառավարությունը (209-րդ հոդված)։
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ՀԱՐՑ 5: Ի՞նչ իրավունքներ ունի աշխատողը երբ իրեն կրճատում են։
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Retrieved Articles: [80, 113, 79]
+Similarity Scores: [0.7508, 0.7296, 0.7295]
+
+ՊԱՏԱՍԽԱՆ:
+
+Աշխատողը ունի աշխատանքում մնալու նախապատվության իրավունք (ՀՀ Աշխատանքային 
+օրենսգիրք, 113-րդ հոդված)։
+
+
+================================================================================
+KEY FINDING: Both BM25 and Dense Failed on Question 3!
+================================================================================
+
+Question: "ինչ է ասում Հոդված 159-րդը" (What does Article 159 say?)
+
+Expected: Should retrieve Article 159
+
+BM25 Retrieved:   [167, 8, 203]   ❌ Failed
+Dense Retrieved:  [157, 177, 90]  ❌ Failed
+
+Root Cause:
+- Armenian morphological suffix "-րդը" (ordinal marker)
+- Both methods struggle with this specific morphology
+- "159-րդը" doesn't easily match "Հոդված 159" in text
+
+However: Question 2 asked about vacation days (general concept)
+Dense DID retrieve Article 159 at position 2! ✅
+
+Lesson:
+- Asking ABOUT a topic → Dense finds it (semantic understanding)
+- Asking FOR a specific article by number → Both methods struggle with morphology
+
+Solution: Hybrid retriever might help by combining both approaches!
+
+================================================================================
+PERFORMANCE SUMMARY
+================================================================================
+
+Dense Retrieval + NVIDIA Llama 3.1-70B
+Total Questions: 5
+Success Rate: 4/5 (80%)
+Language: Armenian (100%)
+Average Response Time: ~5 seconds per question
+Total Cost: $0.00 (FREE)
+
+Quality:
+✅ Questions 1, 2, 4, 5: Excellent Armenian answers
+✅ LLM correctly identified missing context (no hallucination!)
+⚠️  Question 3: Retrieval failed (morphology issue)
+
+================================================================================
