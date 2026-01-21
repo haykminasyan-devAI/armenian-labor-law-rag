@@ -1,0 +1,33 @@
+2026-01-14 16:37:43,913 - INFO - ================================================================================
+2026-01-14 16:37:43,914 - INFO - COMPREHENSIVE RAG EVALUATION
+2026-01-14 16:37:43,914 - INFO - Comparing 4 Retrieval Methods × 2 LLMs = 8 Configurations
+2026-01-14 16:37:43,914 - INFO - ================================================================================
+2026-01-14 16:37:43,914 - INFO - 
+Loading test dataset from /home/hayk.minasyan/Project/NLP_proj/data/evaluation/test_set.json...
+2026-01-14 16:37:43,914 - INFO - ✅ Loaded 87 test questions
+2026-01-14 16:37:43,914 - INFO - Loading chunks from /home/hayk.minasyan/Project/NLP_proj/data/chunks/labor_law_chunks.json...
+2026-01-14 16:37:43,917 - INFO - ✅ Loaded 286 chunks
+2026-01-14 16:37:43,917 - INFO - 
+================================================================================
+2026-01-14 16:37:43,917 - INFO - Initializing Retrievers...
+2026-01-14 16:37:43,917 - INFO - ================================================================================
+2026-01-14 16:37:43,917 - INFO - 
+1/4 Loading BM25 retriever...
+2026-01-14 16:37:43,917 - INFO - Initialized BM25Retriever with 286 chunks
+2026-01-14 16:37:43,926 - INFO - BM25 index loaded from /home/hayk.minasyan/Project/NLP_proj/indices/bm25/bm25_index.pkl
+2026-01-14 16:37:43,926 - INFO - ✅ BM25 ready
+2026-01-14 16:37:43,926 - INFO - 
+2/4 Loading Dense retriever...
+2026-01-14 16:37:43,926 - INFO - Initialized DenseRetriever with 286 chunks
+Traceback (most recent call last):
+  File "/home/hayk.minasyan/Project/NLP_proj/scripts/compare_all_methods.py", line 324, in <module>
+    main()
+  File "/home/hayk.minasyan/Project/NLP_proj/scripts/compare_all_methods.py", line 105, in main
+    dense.load_index(str(dense_index))
+  File "/home/hayk.minasyan/Project/NLP_proj/src/retrieval/dense_retriever.py", line 142, in load_index
+    self.index = faiss.read_index(str(path / "faiss.index"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hayk.minasyan/Project/NLP_proj/venv/lib/python3.11/site-packages/faiss/swigfaiss_avx2.py", line 13058, in read_index
+    return _swigfaiss_avx2.read_index(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Error in faiss::FileIOReader::FileIOReader(const char*) at /project/third-party/faiss/faiss/impl/io.cpp:69: Error: 'f' failed: could not open /home/hayk.minasyan/Project/NLP_proj/data/indices/dense/faiss.index for reading: No such file or directory

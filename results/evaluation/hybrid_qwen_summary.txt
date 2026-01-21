@@ -1,0 +1,20 @@
+================================================================================
+HYBRID + QWEN EVALUATION SUMMARY
+================================================================================
+
+RETRIEVAL METRICS:
+  MRR:           0.583
+  Recall@3:      0.565
+  Precision@3:   0.275
+  Hit@3:         0.647
+  NDCG@3:        0.551
+
+ANSWER QUALITY:
+  Citation Accuracy:     1.000
+  Hallucination Count:   0.00
+
+ANSWER SIMILARITY:
+  F1 Token Score:        0.225
+  Semantic Similarity:   0.830
+
+================================================================================

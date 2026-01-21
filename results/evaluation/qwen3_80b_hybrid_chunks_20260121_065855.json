@@ -1,0 +1,4469 @@
+{
+  "configuration": "Hybrid (New Chunks) + Qwen 3 Next 80B (API)",
+  "retrieval_method": "Hybrid (BM25 + Dense, RRF fusion)",
+  "chunks": "Hybrid (token-optimized, avg 444 tokens)",
+  "generation_model": "qwen/qwen3-next-80b-a3b-instruct",
+  "num_questions": 90,
+  "num_completed": 90,
+  "num_errors": 0,
+  "incomplete_sentences": 82,
+  "elapsed_time_minutes": 78.7,
+  "aggregate_metrics": {
+    "avg_recall@1": 0.3472222222222222,
+    "std_recall@1": 0.4446614053772811,
+    "avg_precision@1": 0.43333333333333335,
+    "std_precision@1": 0.49553562491061687,
+    "avg_hit@1": 0.43333333333333335,
+    "std_hit@1": 0.49553562491061687,
+    "avg_ndcg@1": 0.43333333333333335,
+    "std_ndcg@1": 0.49553562491061687,
+    "avg_recall@3": 0.6084832451499118,
+    "std_recall@3": 0.4432996348788942,
+    "avg_precision@3": 0.26666666666666666,
+    "std_precision@3": 0.180534186769688,
+    "avg_hit@3": 0.7333333333333333,
+    "std_hit@3": 0.4422166387140533,
+    "avg_ndcg@3": 0.8281895755485288,
+    "std_ndcg@3": 0.7016115049841963,
+    "avg_recall@5": 0.7240828924162257,
+    "std_recall@5": 0.4059286217833263,
+    "avg_precision@5": 0.21111111111111108,
+    "std_precision@5": 0.14715407227682936,
+    "avg_hit@5": 0.8222222222222222,
+    "std_hit@5": 0.3823255674241167,
+    "avg_ndcg@5": 1.0273966477120378,
+    "std_ndcg@5": 0.8174937553796938,
+    "avg_recall@10": 0.7240828924162257,
+    "std_recall@10": 0.4059286217833263,
+    "avg_precision@10": 0.21111111111111108,
+    "std_precision@10": 0.14715407227682936,
+    "avg_hit@10": 0.8222222222222222,
+    "std_hit@10": 0.3823255674241167,
+    "avg_ndcg@10": 1.024878209261589,
+    "std_ndcg@10": 0.8195108615677361,
+    "avg_mrr": 0.6012962962962962,
+    "std_mrr": 0.3859990067294981,
+    "avg_average_precision": 1.2377398589065256,
+    "std_average_precision": 1.2526211664932778,
+    "avg_cited_count": 7.344444444444444,
+    "avg_correct_citations": 7.2555555555555555,
+    "avg_hallucinated_citations": 0.08888888888888889,
+    "avg_citation_accuracy": 0.9881433381433381,
+    "avg_has_hallucination": 0.3111111111111111,
+    "avg_citation_hallucination": 0.08888888888888889,
+    "avg_hallucination_count": 0.08888888888888889,
+    "avg_f1_score": 0.24385030531580185,
+    "avg_semantic_similarity": 0.8852838224834866,
+    "avg_context_overlap_ratio": 0.3246880161000511,
+    "total_questions": 90
+  },
+  "detailed_results": [
+    {
+      "question": "1. Հարց\n\nԻ՞նչ են աշխատանքային հարաբերությունները և ինչի՞ վրա են դրանք հիմնվում ՀՀ աշխատանքային օրենսգրքով։",
+      "gold_articles": [
+        13
+      ],
+      "retrieved_articles": [
+        14,
+        1,
+        13,
+        13,
+        1
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.5,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.9306765580733931,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.9306765580733931,
+        "mrr": 0.3333333333333333,
+        "average_precision": 0.8333333333333333
+      },
+      "answer": {
+        "cited_count": 9,
+        "correct_citations": 9,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.28703703703703703,
+        "semantic_similarity": 0.8878918886184692,
+        "context_overlap_ratio": 0.3904109589041096
+      }
+    },
+    {
+      "question": "Որո՞նք են ՀՀ աշխատանքային օրենսդրության հիմնական նպատակները։",
+      "gold_articles": [
+        2
+      ],
+      "retrieved_articles": [
+        3,
+        2,
+        102,
+        4,
+        4
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.6309297535714575,
+        "mrr": 0.5,
+        "average_precision": 0.5
+      },
+      "answer": {
+        "cited_count": 11,
+        "correct_citations": 11,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.1477272727272727,
+        "semantic_similarity": 0.8856692314147949,
+        "context_overlap_ratio": 0.30656934306569344
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է ՀՀ աշխատանքային օրենսգիրքը սահմանում խտրականության արգելքը։",
+      "gold_articles": [
+        3
+      ],
+      "retrieved_articles": [
+        1,
+        3,
+        3,
+        3,
+        7
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.1309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.5616063116448506,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.5616063116448506,
+        "mrr": 0.5,
+        "average_precision": 1.9166666666666665
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.32653061224489793,
+        "semantic_similarity": 0.9186839461326599,
+        "context_overlap_ratio": 0.3448275862068966
+      }
+    },
+    {
+      "question": "Ի՞նչ է համարվում պարտադիր կամ հարկադիր աշխատանք և ինչո՞ւ է այն արգելվում։",
+      "gold_articles": [
+        3
+      ],
+      "retrieved_articles": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 2.1309297535714578,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.9484591188793923,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.9484591188793923,
+        "mrr": 1.0,
+        "average_precision": 5.0
+      },
+      "answer": {
+        "cited_count": 7,
+        "correct_citations": 7,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.33766233766233766,
+        "semantic_similarity": 0.8921684622764587,
+        "context_overlap_ratio": 0.31543624161073824
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է սահմանվում աշխատավայրում բռնությունը և սեռական ոտնձգությունը։",
+      "gold_articles": [
+        3
+      ],
+      "retrieved_articles": [
+        3,
+        3,
+        164,
+        3,
+        3
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.4484591188793923,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.4484591188793923,
+        "mrr": 1.0,
+        "average_precision": 3.55
+      },
+      "answer": {
+        "cited_count": 5,
+        "correct_citations": 5,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.31067961165048547,
+        "semantic_similarity": 0.9128642082214355,
+        "context_overlap_ratio": 0.37410071942446044
+      }
+    },
+    {
+      "question": "Ո՞ւմ վրա է տարածվում ՀՀ աշխատանքային օրենսդրությունը։",
+      "gold_articles": [
+        7
+      ],
+      "retrieved_articles": [
+        106,
+        7,
+        201,
+        4,
+        7
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.0177825608059992,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.0177825608059992,
+        "mrr": 0.5,
+        "average_precision": 0.9
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.34188034188034194,
+        "semantic_similarity": 0.8913239240646362,
+        "context_overlap_ratio": 0.46258503401360546
+      }
+    },
+    {
+      "question": "Ի՞նչ դեր ունեն աշխատանքային պայմանագրերը աշխատանքային հարաբերություններում։",
+      "gold_articles": [
+        83,
+        84,
+        85,
+        14
+      ],
+      "retrieved_articles": [
+        45,
+        6,
+        43,
+        13,
+        73
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "150",
+          "40",
+          "50"
+        ],
+        "f1_score": 0.26724137931034486,
+        "semantic_similarity": 0.8952252268791199,
+        "context_overlap_ratio": 0.3051948051948052
+      }
+    },
+    {
+      "question": "Ի՞նչ է աշխատանքային իրավունակությունը և երբ է այն առաջանում։",
+      "gold_articles": [
+        15
+      ],
+      "retrieved_articles": [
+        15,
+        15,
+        16,
+        16,
+        213
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.6309297535714575,
+        "mrr": 1.0,
+        "average_precision": 2.0
+      },
+      "answer": {
+        "cited_count": 5,
+        "correct_citations": 5,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "2024"
+        ],
+        "f1_score": 0.2568807339449541,
+        "semantic_similarity": 0.8887913823127747,
+        "context_overlap_ratio": 0.40522875816993464
+      }
+    },
+    {
+      "question": "Ո՞վ է համարվում գործատու ՀՀ աշխատանքային օրենսգրքով։",
+      "gold_articles": [
+        18
+      ],
+      "retrieved_articles": [
+        16,
+        18,
+        27,
+        17,
+        14
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.6309297535714575,
+        "mrr": 0.5,
+        "average_precision": 0.5
+      },
+      "answer": {
+        "cited_count": 9,
+        "correct_citations": 9,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.2857142857142857,
+        "semantic_similarity": 0.8794124126434326,
+        "context_overlap_ratio": 0.4129032258064516
+      }
+    },
+    {
+      "question": "Ի՞նչ է աշխատավայրը և ինչպես է այն սահմանվում։",
+      "gold_articles": [
+        18
+      ],
+      "retrieved_articles": [
+        250,
+        18,
+        137,
+        138,
+        245
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.6309297535714575,
+        "mrr": 0.5,
+        "average_precision": 0.5
+      },
+      "answer": {
+        "cited_count": 9,
+        "correct_citations": 9,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.22053231939163495,
+        "semantic_similarity": 0.8225971460342407,
+        "context_overlap_ratio": 0.32727272727272727
+      }
+    },
+    {
+      "question": "Ի՞նչ է աշխատողների կոլեկտիվը և ինչպես են ընդունվում նրա որոշումները։",
+      "gold_articles": [
+        19
+      ],
+      "retrieved_articles": [
+        19,
+        19,
+        5,
+        23,
+        241
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.6309297535714575,
+        "mrr": 1.0,
+        "average_precision": 2.0
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.22522522522522523,
+        "semantic_similarity": 0.8945550322532654,
+        "context_overlap_ratio": 0.352112676056338
+      }
+    },
+    {
+      "question": "Ի՞նչ է աշխատանքային ստաժը և ինչ տեսակներ ունի այն։",
+      "gold_articles": [
+        20
+      ],
+      "retrieved_articles": [
+        20,
+        20,
+        20,
+        20,
+        167
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 2.1309297535714578,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.5616063116448506,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.5616063116448506,
+        "mrr": 1.0,
+        "average_precision": 4.0
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.33333333333333337,
+        "semantic_similarity": 0.9082732200622559,
+        "context_overlap_ratio": 0.2867132867132867
+      }
+    },
+    {
+      "question": "Ի՞նչ իրավունքներ ունեն աշխատողների ներկայացուցիչները։",
+      "gold_articles": [
+        25
+      ],
+      "retrieved_articles": [
+        15,
+        26,
+        6,
+        25,
+        126
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.43067655807339306,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.43067655807339306,
+        "mrr": 0.25,
+        "average_precision": 0.25
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.1736111111111111,
+        "semantic_similarity": 0.8874964118003845,
+        "context_overlap_ratio": 0.3416149068322981
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է իրականացվում սոցիալական գործընկերությունը աշխատանքի ոլորտում։",
+      "gold_articles": [
+        40,
+        41,
+        42,
+        39
+      ],
+      "retrieved_articles": [
+        38,
+        39,
+        39,
+        42,
+        42
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.25,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.5307212739772434,
+        "recall@5": 0.5,
+        "precision@5": 0.4,
+        "hit@5": 1,
+        "ndcg@5": 0.7606395682357036,
+        "recall@10": 0.5,
+        "precision@10": 0.4,
+        "hit@10": 1,
+        "ndcg@10": 0.7606395682357036,
+        "mrr": 0.5,
+        "average_precision": 0.6791666666666667
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.29310344827586204,
+        "semantic_similarity": 0.9082137942314148,
+        "context_overlap_ratio": 0.3161764705882353
+      }
+    },
+    {
+      "question": "Որո՞նք են սոցիալական գործընկերության մակարդակները։",
+      "gold_articles": [
+        41
+      ],
+      "retrieved_articles": [
+        40,
+        41,
+        41,
+        40,
+        39
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.1309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.1309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.1309297535714575,
+        "mrr": 0.5,
+        "average_precision": 1.1666666666666665
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.2079207920792079,
+        "semantic_similarity": 0.9065790772438049,
+        "context_overlap_ratio": 0.19548872180451127
+      }
+    },
+    {
+      "question": "Ի՞նչ է կոլեկտիվ պայմանագիրը։",
+      "gold_articles": [
+        45,
+        46,
+        55,
+        57,
+        59,
+        60,
+        62
+      ],
+      "retrieved_articles": [
+        67,
+        45,
+        60,
+        55,
+        71
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.2857142857142857,
+        "precision@3": 0.6666666666666666,
+        "hit@3": 1,
+        "ndcg@3": 0.5307212739772434,
+        "recall@5": 0.42857142857142855,
+        "precision@5": 0.6,
+        "hit@5": 1,
+        "ndcg@5": 0.5296347172140421,
+        "recall@10": 0.42857142857142855,
+        "precision@10": 0.6,
+        "hit@10": 1,
+        "ndcg@10": 0.4292486164007478,
+        "mrr": 0.5,
+        "average_precision": 0.2738095238095238
+      },
+      "answer": {
+        "cited_count": 10,
+        "correct_citations": 10,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.2893617021276596,
+        "semantic_similarity": 0.8916347622871399,
+        "context_overlap_ratio": 0.45323741007194246
+      }
+    },
+    {
+      "question": "Որքա՞ն է կոլեկտիվ պայմանագրի գործողության առավելագույն ժամկետը։",
+      "gold_articles": [
+        59,
+        52
+      ],
+      "retrieved_articles": [
+        59,
+        59,
+        52,
+        59,
+        59
+      ],
+      "retrieval": {
+        "recall@1": 0.5,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.6666666666666666,
+        "hit@3": 1,
+        "ndcg@3": 1.3065735963827294,
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "hit@5": 1,
+        "ndcg@5": 1.8078394317246163,
+        "recall@10": 1.0,
+        "precision@10": 0.4,
+        "hit@10": 1,
+        "ndcg@10": 1.8078394317246163,
+        "mrr": 1.0,
+        "average_precision": 2.5
+      },
+      "answer": {
+        "cited_count": 5,
+        "correct_citations": 5,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "2023",
+          "2026",
+          "2029",
+          "2025"
+        ],
+        "f1_score": 0.14035087719298245,
+        "semantic_similarity": 0.8928378224372864,
+        "context_overlap_ratio": 0.2689655172413793
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է իրականացվում կոլեկտիվ պայմանագրի կատարման վերահսկողությունը։",
+      "gold_articles": [
+        62
+      ],
+      "retrieved_articles": [
+        62,
+        62,
+        67,
+        39,
+        49
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.6309297535714575,
+        "mrr": 1.0,
+        "average_precision": 2.0
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.2385321100917431,
+        "semantic_similarity": 0.8838786482810974,
+        "context_overlap_ratio": 0.22424242424242424
+      }
+    },
+    {
+      "question": "Ի՞նչ է կոլեկտիվ աշխատանքային վեճը։",
+      "gold_articles": [
+        64
+      ],
+      "retrieved_articles": [
+        67,
+        64,
+        71,
+        263,
+        60
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.6309297535714575,
+        "mrr": 0.5,
+        "average_precision": 0.5
+      },
+      "answer": {
+        "cited_count": 9,
+        "correct_citations": 9,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.35748792270531404,
+        "semantic_similarity": 0.9233939051628113,
+        "context_overlap_ratio": 0.42857142857142855
+      }
+    },
+    {
+      "question": "Ինչ փուլերով է լուծվում կոլեկտիվ աշխատանքային վեճը։",
+      "gold_articles": [
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "retrieved_articles": [
+        264,
+        64,
+        63,
+        71,
+        54
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.16666666666666666,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.14606834984270645,
+        "recall@10": 0.16666666666666666,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.13032376591037062,
+        "mrr": 0.25,
+        "average_precision": 0.041666666666666664
+      },
+      "answer": {
+        "cited_count": 9,
+        "correct_citations": 9,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.2745098039215686,
+        "semantic_similarity": 0.8947629928588867,
+        "context_overlap_ratio": 0.44155844155844154
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է սահմանվում աշխատանքային օրենսդրության կիրառումը ժամանակի մեջ։",
+      "gold_articles": [
+        12
+      ],
+      "retrieved_articles": [
+        3,
+        28,
+        8,
+        150,
+        151
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "30"
+        ],
+        "f1_score": 0.15454545454545454,
+        "semantic_similarity": 0.7889193296432495,
+        "context_overlap_ratio": 0.27439024390243905
+      }
+    },
+    {
+      "question": "Ի՞նչ է օրենքի և իրավունքի անալոգիայի կիրառումը աշխատանքային հարաբերություններում։",
+      "gold_articles": [
+        10
+      ],
+      "retrieved_articles": [
+        10,
+        10,
+        8,
+        10,
+        10
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.4484591188793923,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.4484591188793923,
+        "mrr": 1.0,
+        "average_precision": 3.55
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.42857142857142855,
+        "semantic_similarity": 0.9239597916603088,
+        "context_overlap_ratio": 0.41333333333333333
+      }
+    },
+    {
+      "question": "Ինչպե՞ս են իրականացվում աշխատանքային իրավունքների պաշտպանությունը և ում կողմից։",
+      "gold_articles": [
+        38
+      ],
+      "retrieved_articles": [
+        38,
+        38,
+        35,
+        38,
+        38
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.4484591188793923,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.4484591188793923,
+        "mrr": 1.0,
+        "average_precision": 3.55
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.24271844660194172,
+        "semantic_similarity": 0.9085994362831116,
+        "context_overlap_ratio": 0.22794117647058823
+      }
+    },
+    {
+      "question": "Ո՞ր մարմինն է իրականացնում աշխատանքային օրենսդրության պետական վերահսկողությունը։",
+      "gold_articles": [
+        33
+      ],
+      "retrieved_articles": [
+        33,
+        33,
+        102,
+        35,
+        2
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.6309297535714575,
+        "mrr": 1.0,
+        "average_precision": 2.0
+      },
+      "answer": {
+        "cited_count": 7,
+        "correct_citations": 7,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.34554973821989526,
+        "semantic_similarity": 0.8762619495391846,
+        "context_overlap_ratio": 0.31690140845070425
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է իրականացվում աշխատանքային օրենսդրության ոչ պետական վերահսկողությունը։",
+      "gold_articles": [
+        35
+      ],
+      "retrieved_articles": [
+        25,
+        35,
+        102,
+        33,
+        2
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.6309297535714575,
+        "mrr": 0.5,
+        "average_precision": 0.5
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.3535911602209945,
+        "semantic_similarity": 0.9151871800422668,
+        "context_overlap_ratio": 0.29770992366412213
+      }
+    },
+    {
+      "question": "Ի՞նչ է սոցիալական գործընկերությունը և ինչ նպատակ է այն հետապնդում։",
+      "gold_articles": [
+        40,
+        41,
+        42,
+        39
+      ],
+      "retrieved_articles": [
+        39,
+        39,
+        38,
+        39,
+        167
+      ],
+      "retrieval": {
+        "recall@1": 0.25,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 0.25,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.7653606369886217,
+        "recall@5": 0.25,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.8048099750039491,
+        "recall@10": 0.25,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.8048099750039491,
+        "mrr": 1.0,
+        "average_precision": 0.6875
+      },
+      "answer": {
+        "cited_count": 10,
+        "correct_citations": 10,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.22689075630252098,
+        "semantic_similarity": 0.9015910625457764,
+        "context_overlap_ratio": 0.3072289156626506
+      }
+    },
+    {
+      "question": "Որո՞նք են սոցիալական գործընկերության հիմնական սկզբունքները։",
+      "gold_articles": [
+        39
+      ],
+      "retrieved_articles": [
+        40,
+        39,
+        41,
+        39,
+        39
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.4484591188793923,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.4484591188793923,
+        "mrr": 0.5,
+        "average_precision": 1.6
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.2318840579710145,
+        "semantic_similarity": 0.9343380331993103,
+        "context_overlap_ratio": 0.22900763358778625
+      }
+    },
+    {
+      "question": "Ի՞նչ ձևերով է իրականացվում սոցիալական գործընկերությունը։",
+      "gold_articles": [
+        42
+      ],
+      "retrieved_articles": [
+        42,
+        42,
+        41,
+        40,
+        40
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.6309297535714575,
+        "mrr": 1.0,
+        "average_precision": 2.0
+      },
+      "answer": {
+        "cited_count": 12,
+        "correct_citations": 12,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.16483516483516483,
+        "semantic_similarity": 0.8439229130744934,
+        "context_overlap_ratio": 0.24050632911392406
+      }
+    },
+    {
+      "question": "Ի՞նչ տեղեկատվություն իրավունք ունեն ստանալու աշխատողները աշխատանքային հարաբերությունների վերաբերյալ։",
+      "gold_articles": [
+        43
+      ],
+      "retrieved_articles": [
+        43,
+        43,
+        49,
+        43,
+        45
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.0616063116448506,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.0616063116448506,
+        "mrr": 1.0,
+        "average_precision": 2.75
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.20952380952380953,
+        "semantic_similarity": 0.8848378658294678,
+        "context_overlap_ratio": 0.3013698630136986
+      }
+    },
+    {
+      "question": "Ի՞նչ է կոլեկտիվ պայմանագիրը և ինչպիսի՞ իրավական բնույթ ունի այն։",
+      "gold_articles": [
+        39,
+        41,
+        42,
+        45,
+        46,
+        49,
+        55,
+        57,
+        59
+      ],
+      "retrieved_articles": [
+        54,
+        45,
+        140,
+        55,
+        138
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.1111111111111111,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.2960819109658652,
+        "recall@5": 0.2222222222222222,
+        "precision@5": 0.4,
+        "hit@5": 1,
+        "ndcg@5": 0.36005461457723403,
+        "recall@10": 0.2222222222222222,
+        "precision@10": 0.4,
+        "hit@10": 1,
+        "ndcg@10": 0.24952583878244927,
+        "mrr": 0.5,
+        "average_precision": 0.1111111111111111
+      },
+      "answer": {
+        "cited_count": 12,
+        "correct_citations": 11,
+        "hallucinated_citations": 1,
+        "citation_accuracy": 0.9166666666666666,
+        "has_hallucination": true,
+        "citation_hallucination": true,
+        "hallucinated_articles": [
+          49
+        ],
+        "hallucination_count": 1,
+        "hallucination_severity": "low",
+        "f1_score": 0.2892561983471074,
+        "semantic_similarity": 0.9154411554336548,
+        "context_overlap_ratio": 0.35374149659863946
+      }
+    },
+    {
+      "question": "Որո՞նք են կոլեկտիվ պայմանագրերի հիմնական մակարդակները։",
+      "gold_articles": [
+        46
+      ],
+      "retrieved_articles": [
+        49,
+        46,
+        50,
+        45,
+        102
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.6309297535714575,
+        "mrr": 0.5,
+        "average_precision": 0.5
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 7,
+        "hallucinated_citations": 1,
+        "citation_accuracy": 0.875,
+        "has_hallucination": true,
+        "citation_hallucination": true,
+        "hallucinated_articles": [
+          48
+        ],
+        "hallucination_count": 1,
+        "hallucination_severity": "low",
+        "f1_score": 0.22110552763819097,
+        "semantic_similarity": 0.8903689980506897,
+        "context_overlap_ratio": 0.23703703703703705
+      }
+    },
+    {
+      "question": "Ո՞ւմ վրա են տարածվում հանրապետական և ճյուղային կոլեկտիվ պայմանագրերը։",
+      "gold_articles": [
+        47
+      ],
+      "retrieved_articles": [
+        48,
+        48,
+        48,
+        49,
+        49
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 4,
+        "correct_citations": 4,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.22093023255813957,
+        "semantic_similarity": 0.8924697637557983,
+        "context_overlap_ratio": 0.26515151515151514
+      }
+    },
+    {
+      "question": "Ինչպիսի՞ հարցեր կարող են կարգավորվել ճյուղային և տարածքային կոլեկտիվ պայմանագրերով։",
+      "gold_articles": [
+        49
+      ],
+      "retrieved_articles": [
+        49,
+        50,
+        50,
+        52,
+        52
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0,
+        "average_precision": 1.0
+      },
+      "answer": {
+        "cited_count": 7,
+        "correct_citations": 7,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.16666666666666669,
+        "semantic_similarity": 0.9037445187568665,
+        "context_overlap_ratio": 0.32167832167832167
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է իրականացվում կոլեկտիվ պայմանագրերի հաշվառումը։",
+      "gold_articles": [
+        59,
+        51
+      ],
+      "retrieved_articles": [
+        44,
+        59,
+        49,
+        51,
+        50
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.38685280723454163,
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "hit@5": 1,
+        "ndcg@5": 0.6509209298071326,
+        "recall@10": 1.0,
+        "precision@10": 0.4,
+        "hit@10": 1,
+        "ndcg@10": 0.6509209298071326,
+        "mrr": 0.5,
+        "average_precision": 0.5
+      },
+      "answer": {
+        "cited_count": 7,
+        "correct_citations": 7,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.2847457627118644,
+        "semantic_similarity": 0.8960525989532471,
+        "context_overlap_ratio": 0.3150684931506849
+      }
+    },
+    {
+      "question": "Ե՞րբ են կոլեկտիվ պայմանագրերը մտնում ուժի մեջ։",
+      "gold_articles": [
+        59,
+        52
+      ],
+      "retrieved_articles": [
+        59,
+        59,
+        52,
+        45,
+        5
+      ],
+      "retrieval": {
+        "recall@1": 0.5,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.6666666666666666,
+        "hit@3": 1,
+        "ndcg@3": 1.3065735963827294,
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "hit@5": 1,
+        "ndcg@5": 1.3065735963827294,
+        "recall@10": 1.0,
+        "precision@10": 0.4,
+        "hit@10": 1,
+        "ndcg@10": 1.3065735963827294,
+        "mrr": 1.0,
+        "average_precision": 1.5
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "15",
+          "2024"
+        ],
+        "f1_score": 0.26285714285714284,
+        "semantic_similarity": 0.921822726726532,
+        "context_overlap_ratio": 0.2748091603053435
+      }
+    },
+    {
+      "question": "Ինչպե՞ս կարող է փոփոխվել կամ լրացվել կազմակերպության կոլեկտիվ պայմանագիրը։",
+      "gold_articles": [
+        60
+      ],
+      "retrieved_articles": [
+        55,
+        60,
+        59,
+        59,
+        45
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.6309297535714575,
+        "mrr": 0.5,
+        "average_precision": 0.5
+      },
+      "answer": {
+        "cited_count": 11,
+        "correct_citations": 11,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "15"
+        ],
+        "f1_score": 0.3125,
+        "semantic_similarity": 0.9200575947761536,
+        "context_overlap_ratio": 0.4155844155844156
+      }
+    },
+    {
+      "question": "Ո՞ր դեպքերում կարող է լուծվել կազմակերպության կոլեկտիվ պայմանագիրը։",
+      "gold_articles": [
+        60
+      ],
+      "retrieved_articles": [
+        61,
+        61,
+        52,
+        59,
+        55
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.26540284360189575,
+        "semantic_similarity": 0.9029973745346069,
+        "context_overlap_ratio": 0.39215686274509803
+      }
+    },
+    {
+      "question": "Ի՞նչ է կոլեկտիվ աշխատանքային վեճի առաջացման հիմքը։",
+      "gold_articles": [
+        64
+      ],
+      "retrieved_articles": [
+        67,
+        263,
+        72,
+        64,
+        67
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.43067655807339306,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.43067655807339306,
+        "mrr": 0.25,
+        "average_precision": 0.25
+      },
+      "answer": {
+        "cited_count": 9,
+        "correct_citations": 9,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.29743589743589743,
+        "semantic_similarity": 0.9005970358848572,
+        "context_overlap_ratio": 0.45588235294117646
+      }
+    },
+    {
+      "question": "Ինչո՞ւ է հաշտեցման հանձնաժողովը պարտադիր փուլ կոլեկտիվ աշխատանքային վեճերի լուծման մեջ։",
+      "gold_articles": [
+        67,
+        68,
+        69,
+        70
+      ],
+      "retrieved_articles": [
+        67,
+        67,
+        68,
+        69,
+        70
+      ],
+      "retrieval": {
+        "recall@1": 0.25,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 0.5,
+        "precision@3": 0.6666666666666666,
+        "hit@3": 1,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.8,
+        "hit@5": 1,
+        "ndcg@5": 1.1510196182278052,
+        "recall@10": 1.0,
+        "precision@10": 0.8,
+        "hit@10": 1,
+        "ndcg@10": 1.1510196182278052,
+        "mrr": 1.0,
+        "average_precision": 1.25
+      },
+      "answer": {
+        "cited_count": 5,
+        "correct_citations": 5,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.25,
+        "semantic_similarity": 0.8888425827026367,
+        "context_overlap_ratio": 0.3374233128834356
+      }
+    },
+    {
+      "question": "Կարո՞ղ է գործատուն ներքին իրավական ակտով սահմանել աշխատողի համար օրենքից վատթար պայմաններ, եթե աշխատողը տվել է իր համաձայնությունը։",
+      "gold_articles": [
+        5
+      ],
+      "retrieved_articles": [
+        230,
+        121,
+        105,
+        104,
+        122
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 5,
+        "correct_citations": 5,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "12"
+        ],
+        "f1_score": 0.22123893805309733,
+        "semantic_similarity": 0.8842265605926514,
+        "context_overlap_ratio": 0.20481927710843373
+      }
+    },
+    {
+      "question": "Արդյո՞ք օտարերկրյա գործատուի հետ աշխատող ՀՀ քաղաքացու վրա միշտ տարածվում է ՀՀ աշխատանքային օրենսդրությունը։",
+      "gold_articles": [
+        7
+      ],
+      "retrieved_articles": [
+        7,
+        7,
+        106,
+        7,
+        7
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.4484591188793923,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.4484591188793923,
+        "mrr": 1.0,
+        "average_precision": 3.55
+      },
+      "answer": {
+        "cited_count": 5,
+        "correct_citations": 5,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.31693989071038253,
+        "semantic_similarity": 0.9218928217887878,
+        "context_overlap_ratio": 0.3582089552238806
+      }
+    },
+    {
+      "question": "Կարո՞ղ է օրենքի անալոգիան կիրառվել, եթե դրա արդյունքում սահմանափակվում են գործատուի իրավունքները։",
+      "gold_articles": [
+        10
+      ],
+      "retrieved_articles": [
+        10,
+        10,
+        227,
+        10,
+        109
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.0616063116448506,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.0616063116448506,
+        "mrr": 1.0,
+        "average_precision": 2.75
+      },
+      "answer": {
+        "cited_count": 9,
+        "correct_citations": 9,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.20202020202020204,
+        "semantic_similarity": 0.9102110862731934,
+        "context_overlap_ratio": 0.24203821656050956
+      }
+    },
+    {
+      "question": "Կարո՞ղ է մինչև 16 տարեկան անձը մշտական աշխատանքի ընդունվել ծնողի համաձայնությամբ։",
+      "gold_articles": [
+        17
+      ],
+      "retrieved_articles": [
+        17,
+        17,
+        154,
+        17,
+        85
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.0616063116448506,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.0616063116448506,
+        "mrr": 1.0,
+        "average_precision": 2.75
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "15"
+        ],
+        "f1_score": 0.20388349514563103,
+        "semantic_similarity": 0.887418806552887,
+        "context_overlap_ratio": 0.3269230769230769
+      }
+    },
+    {
+      "question": "Եթե կազմակերպությունում կա արհեստակցական միություն, արդյո՞ք այն միշտ ներկայացնում է բոլոր աշխատողների շահերը։",
+      "gold_articles": [
+        23
+      ],
+      "retrieved_articles": [
+        23,
+        23,
+        22,
+        23,
+        23
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.4484591188793923,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.4484591188793923,
+        "mrr": 1.0,
+        "average_precision": 3.55
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 7,
+        "hallucinated_citations": 1,
+        "citation_accuracy": 0.875,
+        "has_hallucination": true,
+        "citation_hallucination": true,
+        "hallucinated_articles": [
+          56
+        ],
+        "hallucination_count": 1,
+        "hallucination_severity": "low",
+        "f1_score": 0.23157894736842108,
+        "semantic_similarity": 0.837202787399292,
+        "context_overlap_ratio": 0.3790322580645161
+      }
+    },
+    {
+      "question": "Կարո՞ղ է աշխատողը շրջանցել հաշտեցման հանձնաժողովը և անմիջապես դիմել դատարան կոլեկտիվ աշխատանքային վեճի դեպքում։",
+      "gold_articles": [
+        72,
+        67
+      ],
+      "retrieved_articles": [
+        72,
+        72,
+        68,
+        264,
+        67
+      ],
+      "retrieval": {
+        "recall@1": 0.5,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "hit@5": 1,
+        "ndcg@5": 1.2371977127692964,
+        "recall@10": 1.0,
+        "precision@10": 0.4,
+        "hit@10": 1,
+        "ndcg@10": 1.2371977127692964,
+        "mrr": 1.0,
+        "average_precision": 1.3
+      },
+      "answer": {
+        "cited_count": 12,
+        "correct_citations": 12,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.3054187192118226,
+        "semantic_similarity": 0.930698573589325,
+        "context_overlap_ratio": 0.2980132450331126
+      }
+    },
+    {
+      "question": "Կարո՞ղ է կոլեկտիվ պայմանագիրը շարունակել գործել կազմակերպության վերակազմակերպումից հետո։",
+      "gold_articles": [
+        59
+      ],
+      "retrieved_articles": [
+        59,
+        59,
+        60,
+        59,
+        54
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.0616063116448506,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.0616063116448506,
+        "mrr": 1.0,
+        "average_precision": 2.75
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.35714285714285715,
+        "semantic_similarity": 0.925276517868042,
+        "context_overlap_ratio": 0.35251798561151076
+      }
+    },
+    {
+      "question": "Եթե գործատուն չի ներկայացնում կոլեկտիվ պայմանագիրը հաշվառման, արդյո՞ք պայմանագիրը կորցնում է իրավական ուժը։",
+      "gold_articles": [
+        59
+      ],
+      "retrieved_articles": [
+        51,
+        59,
+        59,
+        59,
+        59
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.1309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.9484591188793923,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.9484591188793923,
+        "mrr": 0.5,
+        "average_precision": 2.716666666666667
+      },
+      "answer": {
+        "cited_count": 5,
+        "correct_citations": 5,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "25",
+          "20",
+          "2025"
+        ],
+        "f1_score": 0.28865979381443296,
+        "semantic_similarity": 0.898623526096344,
+        "context_overlap_ratio": 0.2585034013605442
+      }
+    },
+    {
+      "question": "Կարո՞ղ է սոցիալական գործընկերության շրջանակում ստանձնած պարտավորությունը չկատարվել՝ հղում կատարելով ֆինանսական դժվարություններին։",
+      "gold_articles": [
+        39
+      ],
+      "retrieved_articles": [
+        41,
+        65,
+        40,
+        42,
+        39
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.38685280723454163,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.38685280723454163,
+        "mrr": 0.2,
+        "average_precision": 0.2
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "15"
+        ],
+        "f1_score": 0.22641509433962265,
+        "semantic_similarity": 0.8812617063522339,
+        "context_overlap_ratio": 0.2012987012987013
+      }
+    },
+    {
+      "question": "Կարո՞ղ է աշխատավայրում բռնության վերաբերյալ պաշտպանություն իրականացվել առանց դատարան դիմելու։",
+      "gold_articles": [
+        3,
+        38
+      ],
+      "retrieved_articles": [
+        164,
+        215,
+        152,
+        38,
+        3
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "hit@5": 1,
+        "ndcg@5": 0.5012658353418871,
+        "recall@10": 1.0,
+        "precision@10": 0.4,
+        "hit@10": 1,
+        "ndcg@10": 0.5012658353418871,
+        "mrr": 0.25,
+        "average_precision": 0.325
+      },
+      "answer": {
+        "cited_count": 9,
+        "correct_citations": 9,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.28054298642533937,
+        "semantic_similarity": 0.8926899433135986,
+        "context_overlap_ratio": 0.27564102564102566
+      }
+    },
+    {
+      "question": "Ի՞նչ իրավական ուժ ունեն գործատուի ներքին իրավական ակտերը աշխատանքային հարաբերություններում։",
+      "gold_articles": [
+        5
+      ],
+      "retrieved_articles": [
+        5,
+        5,
+        5,
+        6,
+        11
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 2.1309297535714578,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.1309297535714578,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.1309297535714578,
+        "mrr": 1.0,
+        "average_precision": 3.0
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 5,
+        "hallucinated_citations": 1,
+        "citation_accuracy": 0.8333333333333334,
+        "has_hallucination": true,
+        "citation_hallucination": true,
+        "hallucinated_articles": [
+          108
+        ],
+        "hallucination_count": 1,
+        "hallucination_severity": "low",
+        "f1_score": 0.2913385826771654,
+        "semantic_similarity": 0.9072456359863281,
+        "context_overlap_ratio": 0.36
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է սահմանվում աշխատանքային հարաբերությունների ծագման վայրը։",
+      "gold_articles": [
+        14
+      ],
+      "retrieved_articles": [
+        14,
+        14,
+        12,
+        18,
+        102
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.6309297535714575,
+        "mrr": 1.0,
+        "average_precision": 2.0
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "15",
+          "16"
+        ],
+        "f1_score": 0.17543859649122806,
+        "semantic_similarity": 0.8458053469657898,
+        "context_overlap_ratio": 0.2080536912751678
+      }
+    },
+    {
+      "question": "Ի՞նչ պայմաններում կարող են աշխատանքային հարաբերությունները իրականացվել թվային համակարգի միջոցով։",
+      "gold_articles": [
+        85,
+        13,
+        102
+      ],
+      "retrieved_articles": [
+        13,
+        13,
+        102,
+        13,
+        85
+      ],
+      "retrieval": {
+        "recall@1": 0.3333333333333333,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 0.6666666666666666,
+        "precision@3": 0.6666666666666666,
+        "hit@3": 1,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.6,
+        "hit@5": 1,
+        "ndcg@5": 1.3836491390379002,
+        "recall@10": 1.0,
+        "precision@10": 0.6,
+        "hit@10": 1,
+        "ndcg@10": 1.3836491390379002,
+        "mrr": 1.0,
+        "average_precision": 1.6666666666666667
+      },
+      "answer": {
+        "cited_count": 7,
+        "correct_citations": 6,
+        "hallucinated_citations": 1,
+        "citation_accuracy": 0.8571428571428571,
+        "has_hallucination": true,
+        "citation_hallucination": true,
+        "hallucinated_articles": [
+          14
+        ],
+        "hallucination_count": 1,
+        "hallucination_severity": "low",
+        "f1_score": 0.22614840989399296,
+        "semantic_similarity": 0.8520267009735107,
+        "context_overlap_ratio": 0.3741935483870968
+      }
+    },
+    {
+      "question": "Ո՞ր դեպքերում են աշխատանքային հարաբերությունները ծագում ոչ թե պայմանագրով, այլ անհատական իրավական ակտով։",
+      "gold_articles": [
+        14
+      ],
+      "retrieved_articles": [
+        14,
+        14,
+        14,
+        7,
+        5
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 2.1309297535714578,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.1309297535714578,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.1309297535714578,
+        "mrr": 1.0,
+        "average_precision": 3.0
+      },
+      "answer": {
+        "cited_count": 5,
+        "correct_citations": 5,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.31,
+        "semantic_similarity": 0.929131805896759,
+        "context_overlap_ratio": 0.4066666666666667
+      }
+    },
+    {
+      "question": "Ի՞նչ իրավական հետևանքներ ունի քաղաքացիաիրավական պայմանագրով փաստացի աշխատանք կատարելը։",
+      "gold_articles": [
+        102
+      ],
+      "retrieved_articles": [
+        7,
+        7,
+        102,
+        7,
+        101
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.5,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.5,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.5,
+        "mrr": 0.3333333333333333,
+        "average_precision": 0.3333333333333333
+      },
+      "answer": {
+        "cited_count": 5,
+        "correct_citations": 5,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.29387755102040813,
+        "semantic_similarity": 0.8790743947029114,
+        "context_overlap_ratio": 0.432258064516129
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է իրականացվում աշխատողների ներկայացուցչության կամավորությունը։",
+      "gold_articles": [
+        19,
+        21,
+        22,
+        23
+      ],
+      "retrieved_articles": [
+        22,
+        56,
+        145,
+        22,
+        22
+      ],
+      "retrieval": {
+        "recall@1": 0.25,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 0.25,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.46927872602275644,
+        "recall@5": 0.25,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.7095272044910244,
+        "recall@10": 0.25,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.7095272044910244,
+        "mrr": 1.0,
+        "average_precision": 0.525
+      },
+      "answer": {
+        "cited_count": 7,
+        "correct_citations": 7,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "100",
+          "51"
+        ],
+        "f1_score": 0.2591093117408907,
+        "semantic_similarity": 0.8952614665031433,
+        "context_overlap_ratio": 0.4166666666666667
+      }
+    },
+    {
+      "question": "Կարո՞ղ է նույն անձը միաժամանակ ներկայացնել աշխատողների և գործատուների շահերը։",
+      "gold_articles": [
+        23
+      ],
+      "retrieved_articles": [
+        23,
+        23,
+        139,
+        22,
+        95
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.6309297535714575,
+        "mrr": 1.0,
+        "average_precision": 2.0
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.2178217821782178,
+        "semantic_similarity": 0.8504781126976013,
+        "context_overlap_ratio": 0.2631578947368421
+      }
+    },
+    {
+      "question": "Ի՞նչ պարտականություններ ունի գործատուն աշխատողների ներկայացուցիչների գործունեության նկատմամբ։",
+      "gold_articles": [
+        26
+      ],
+      "retrieved_articles": [
+        26,
+        26,
+        4,
+        22,
+        253
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.6309297535714575,
+        "mrr": 1.0,
+        "average_precision": 2.0
+      },
+      "answer": {
+        "cited_count": 10,
+        "correct_citations": 10,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.22127659574468084,
+        "semantic_similarity": 0.8609281182289124,
+        "context_overlap_ratio": 0.352112676056338
+      }
+    },
+    {
+      "question": "Ի՞նչ է ներկայացուցչական միասնական մարմինը և երբ է այն ստեղծվում։",
+      "gold_articles": [
+        23
+      ],
+      "retrieved_articles": [
+        56,
+        56,
+        56,
+        22,
+        119
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 11,
+        "correct_citations": 11,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "14"
+        ],
+        "f1_score": 0.2639593908629442,
+        "semantic_similarity": 0.8884580135345459,
+        "context_overlap_ratio": 0.40145985401459855
+      }
+    },
+    {
+      "question": "Ինչպե՞ս են սահմանվում աշխատանքային ժամկետները։",
+      "gold_articles": [
+        28,
+        29
+      ],
+      "retrieved_articles": [
+        180,
+        142,
+        43,
+        138,
+        189
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 7,
+        "correct_citations": 7,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "17",
+          "30"
+        ],
+        "f1_score": 0.1572052401746725,
+        "semantic_similarity": 0.813732922077179,
+        "context_overlap_ratio": 0.3904109589041096
+      }
+    },
+    {
+      "question": "Ի՞նչ է հայցային վաղեմությունը աշխատանքային հարաբերություններում։",
+      "gold_articles": [
+        30
+      ],
+      "retrieved_articles": [
+        30,
+        30,
+        30,
+        115,
+        30
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 2.1309297535714578,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.5177825608059994,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.5177825608059994,
+        "mrr": 1.0,
+        "average_precision": 3.8
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.32258064516129037,
+        "semantic_similarity": 0.9452354907989502,
+        "context_overlap_ratio": 0.2896551724137931
+      }
+    },
+    {
+      "question": "Ո՞ր պահանջների նկատմամբ հայցային վաղեմությունը չի կիրառվում։",
+      "gold_articles": [
+        30
+      ],
+      "retrieved_articles": [
+        30,
+        30,
+        30,
+        30,
+        102
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 2.1309297535714578,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.5616063116448506,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.5616063116448506,
+        "mrr": 1.0,
+        "average_precision": 4.0
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.08391608391608392,
+        "semantic_similarity": 0.8097602725028992,
+        "context_overlap_ratio": 0.4049586776859504
+      }
+    },
+    {
+      "question": "Ի՞նչ են մարման ժամկետները և ինչ առանձնահատկություն ունեն դրանք։",
+      "gold_articles": [
+        30
+      ],
+      "retrieved_articles": [
+        31,
+        29,
+        31,
+        29,
+        32
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 9,
+        "correct_citations": 9,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "28",
+          "15",
+          "30"
+        ],
+        "f1_score": 0.19008264462809918,
+        "semantic_similarity": 0.7681397795677185,
+        "context_overlap_ratio": 0.4088050314465409
+      }
+    },
+    {
+      "question": "Ինչպե՞ս են ծագում աշխատանքային իրավունքներն ու պարտականությունները։",
+      "gold_articles": [
+        36
+      ],
+      "retrieved_articles": [
+        24,
+        36,
+        2,
+        36,
+        1
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.0616063116448506,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.0616063116448506,
+        "mrr": 0.5,
+        "average_precision": 1.0
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.34951456310679613,
+        "semantic_similarity": 0.8915296196937561,
+        "context_overlap_ratio": 0.34814814814814815
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է իրականացվում աշխատողների և գործատուների շահերի համաձայնեցումը։",
+      "gold_articles": [
+        40,
+        41,
+        42,
+        39
+      ],
+      "retrieved_articles": [
+        39,
+        22,
+        73,
+        24,
+        25
+      ],
+      "retrieval": {
+        "recall@1": 0.25,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 0.25,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.46927872602275644,
+        "recall@5": 0.25,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.3903800499921017,
+        "recall@10": 0.25,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.3903800499921017,
+        "mrr": 1.0,
+        "average_precision": 0.25
+      },
+      "answer": {
+        "cited_count": 7,
+        "correct_citations": 7,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.1971830985915493,
+        "semantic_similarity": 0.8437326550483704,
+        "context_overlap_ratio": 0.39285714285714285
+      }
+    },
+    {
+      "question": "Կարո՞ղ են աշխատանքային հարաբերությունները կարգավորվել միաժամանակ մի քանի իրավական ակտերով։",
+      "gold_articles": [
+        10,
+        4,
+        5,
+        6
+      ],
+      "retrieved_articles": [
+        225,
+        1,
+        20,
+        7,
+        73
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.2445414847161572,
+        "semantic_similarity": 0.9018715620040894,
+        "context_overlap_ratio": 0.3223684210526316
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է որոշվում, թե որ իրավական ակտն է գերակա հակասության դեպքում։",
+      "gold_articles": [
+        11,
+        4,
+        5,
+        6
+      ],
+      "retrieved_articles": [
+        7,
+        11,
+        11,
+        38,
+        29
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.25,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.5307212739772434,
+        "recall@5": 0.25,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.44149241373678083,
+        "recall@10": 0.25,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.44149241373678083,
+        "mrr": 0.5,
+        "average_precision": 0.29166666666666663
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 5,
+        "hallucinated_citations": 1,
+        "citation_accuracy": 0.8333333333333334,
+        "has_hallucination": true,
+        "citation_hallucination": true,
+        "hallucinated_articles": [
+          112
+        ],
+        "hallucination_count": 1,
+        "hallucination_severity": "low",
+        "f1_score": 0.22580645161290322,
+        "semantic_similarity": 0.9146425724029541,
+        "context_overlap_ratio": 0.2994011976047904
+      }
+    },
+    {
+      "question": "Ի՞նչ է աշխատանքի ազատ ընտրության սկզբունքը։",
+      "gold_articles": [
+        3
+      ],
+      "retrieved_articles": [
+        3,
+        3,
+        39,
+        175,
+        164
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.6309297535714575,
+        "mrr": 1.0,
+        "average_precision": 2.0
+      },
+      "answer": {
+        "cited_count": 7,
+        "correct_citations": 7,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.19658119658119658,
+        "semantic_similarity": 0.9060608148574829,
+        "context_overlap_ratio": 0.23417721518987342
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է ապահովվում աշխատողի արժանապատվության պաշտպանությունը աշխատանքային հարաբերություններում։",
+      "gold_articles": [
+        3,
+        37,
+        243,
+        245,
+        218
+      ],
+      "retrieved_articles": [
+        30,
+        38,
+        258,
+        102,
+        215
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 5,
+        "correct_citations": 5,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.2040816326530612,
+        "semantic_similarity": 0.8274754881858826,
+        "context_overlap_ratio": 0.3393939393939394
+      }
+    },
+    {
+      "question": "Ի՞նչ է իրավահավասարությունը աշխատանքային հարաբերություններում։",
+      "gold_articles": [
+        178,
+        3
+      ],
+      "retrieved_articles": [
+        14,
+        3,
+        85,
+        13,
+        20
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.38685280723454163,
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.38685280723454163,
+        "recall@10": 0.5,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.38685280723454163,
+        "mrr": 0.5,
+        "average_precision": 0.25
+      },
+      "answer": {
+        "cited_count": 5,
+        "correct_citations": 5,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.1397058823529412,
+        "semantic_similarity": 0.8136584758758545,
+        "context_overlap_ratio": 0.4125
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է սահմանվում աշխատողի իրավական դրության վատթարացումը։",
+      "gold_articles": [
+        120,
+        113
+      ],
+      "retrieved_articles": [
+        246,
+        36,
+        166,
+        113,
+        86
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.2640681225725909,
+        "recall@10": 0.5,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.2640681225725909,
+        "mrr": 0.25,
+        "average_precision": 0.125
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.18604651162790697,
+        "semantic_similarity": 0.8624626398086548,
+        "context_overlap_ratio": 0.23841059602649006
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է իրականացվում աշխատանքային հարաբերությունների օրինականության վերահսկողությունը։",
+      "gold_articles": [
+        33,
+        35
+      ],
+      "retrieved_articles": [
+        13,
+        33,
+        13,
+        35,
+        78
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.38685280723454163,
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "hit@5": 1,
+        "ndcg@5": 0.6509209298071326,
+        "recall@10": 1.0,
+        "precision@10": 0.4,
+        "hit@10": 1,
+        "ndcg@10": 0.6509209298071326,
+        "mrr": 0.5,
+        "average_precision": 0.5
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.27225130890052357,
+        "semantic_similarity": 0.897589385509491,
+        "context_overlap_ratio": 0.3404255319148936
+      }
+    },
+    {
+      "question": "Ի՞նչ է աշխատանքային իրավահարաբերության դադարեցման իրավական հիմքը։",
+      "gold_articles": [
+        113,
+        114,
+        109
+      ],
+      "retrieved_articles": [
+        265,
+        108,
+        250,
+        114,
+        109
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.6666666666666666,
+        "precision@5": 0.4,
+        "hit@5": 1,
+        "ndcg@5": 0.38364913903790027,
+        "recall@10": 0.6666666666666666,
+        "precision@10": 0.4,
+        "hit@10": 1,
+        "ndcg@10": 0.38364913903790027,
+        "mrr": 0.25,
+        "average_precision": 0.21666666666666667
+      },
+      "answer": {
+        "cited_count": 11,
+        "correct_citations": 10,
+        "hallucinated_citations": 1,
+        "citation_accuracy": 0.9090909090909091,
+        "has_hallucination": true,
+        "citation_hallucination": true,
+        "hallucinated_articles": [
+          113
+        ],
+        "hallucination_count": 1,
+        "hallucination_severity": "low",
+        "f1_score": 0.15789473684210525,
+        "semantic_similarity": 0.8826457858085632,
+        "context_overlap_ratio": 0.425
+      }
+    },
+    {
+      "question": "Ինչպե՞ս են փոխկապակցված աշխատանքային իրավունքներն ու պարտականությունները։",
+      "gold_articles": [
+        3,
+        36,
+        37,
+        13,
+        244,
+        216,
+        217
+      ],
+      "retrieved_articles": [
+        24,
+        6,
+        2,
+        6,
+        1
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "40",
+          "70"
+        ],
+        "f1_score": 0.1992619926199262,
+        "semantic_similarity": 0.8748228549957275,
+        "context_overlap_ratio": 0.3184713375796178
+      }
+    },
+    {
+      "question": "Ի՞նչ է աշխատանքային հարաբերություններում բարեխղճության սկզբունքը։",
+      "gold_articles": [
+        37
+      ],
+      "retrieved_articles": [
+        23,
+        13,
+        23,
+        13,
+        23
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "41",
+          "35",
+          "40",
+          "20",
+          "25",
+          "60",
+          "66"
+        ],
+        "f1_score": 0.17307692307692307,
+        "semantic_similarity": 0.8785800337791443,
+        "context_overlap_ratio": 0.2913907284768212
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է կանխվում աշխատանքային իրավունքների չարաշահումը։",
+      "gold_articles": [
+        37,
+        38
+      ],
+      "retrieved_articles": [
+        38,
+        38,
+        38,
+        215,
+        37
+      ],
+      "retrieval": {
+        "recall@1": 0.5,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.3065735963827294,
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "hit@5": 1,
+        "ndcg@5": 1.5437713091520255,
+        "recall@10": 1.0,
+        "precision@10": 0.4,
+        "hit@10": 1,
+        "ndcg@10": 1.5437713091520255,
+        "mrr": 1.0,
+        "average_precision": 1.9
+      },
+      "answer": {
+        "cited_count": 7,
+        "correct_citations": 7,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.2139917695473251,
+        "semantic_similarity": 0.8925720453262329,
+        "context_overlap_ratio": 0.30405405405405406
+      }
+    },
+    {
+      "question": "Ի՞նչ է իրավունքի ճանաչումը որպես պաշտպանության միջոց։",
+      "gold_articles": [
+        38
+      ],
+      "retrieved_articles": [
+        30,
+        30,
+        138,
+        38,
+        165
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.43067655807339306,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.43067655807339306,
+        "mrr": 0.25,
+        "average_precision": 0.25
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.17316017316017315,
+        "semantic_similarity": 0.7827581763267517,
+        "context_overlap_ratio": 0.1696969696969697
+      }
+    },
+    {
+      "question": "Ի՞նչ է իրավախախտման վերացումը աշխատանքային իրավունքում։",
+      "gold_articles": [
+        38
+      ],
+      "retrieved_articles": [
+        75,
+        121,
+        108,
+        113,
+        14
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 5,
+        "correct_citations": 5,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.1532258064516129,
+        "semantic_similarity": 0.8443793058395386,
+        "context_overlap_ratio": 0.26506024096385544
+      }
+    },
+    {
+      "question": "Ի՞նչ է իրավահարաբերության փոփոխումը որպես պաշտպանության միջոց։",
+      "gold_articles": [
+        38
+      ],
+      "retrieved_articles": [
+        138,
+        38,
+        13,
+        30,
+        106
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.6309297535714575,
+        "mrr": 0.5,
+        "average_precision": 0.5
+      },
+      "answer": {
+        "cited_count": 5,
+        "correct_citations": 5,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.23437500000000003,
+        "semantic_similarity": 0.8952623605728149,
+        "context_overlap_ratio": 0.27380952380952384
+      }
+    },
+    {
+      "question": "Ի՞նչ է իրավահարաբերության դադարեցումը որպես պաշտպանության միջոց։",
+      "gold_articles": [
+        109
+      ],
+      "retrieved_articles": [
+        138,
+        38,
+        165,
+        30,
+        124
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 7,
+        "correct_citations": 7,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.2196969696969697,
+        "semantic_similarity": 0.8040240406990051,
+        "context_overlap_ratio": 0.2922077922077922
+      }
+    },
+    {
+      "question": "Ինչպե՞ս է իրականացվում աշխատանքային իրավունքների վերականգնումը։",
+      "gold_articles": [
+        38
+      ],
+      "retrieved_articles": [
+        38,
+        38,
+        38,
+        265,
+        37
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 2.1309297535714578,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 2.1309297535714578,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 2.1309297535714578,
+        "mrr": 1.0,
+        "average_precision": 3.0
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.18852459016393444,
+        "semantic_similarity": 0.8907455205917358,
+        "context_overlap_ratio": 0.4444444444444444
+      }
+    },
+    {
+      "question": "Ինչո՞ւ է աշխատանքային օրենսդրության սկզբունքների պահպանումը կարևոր իրավակիրառման համար։",
+      "gold_articles": [
+        3
+      ],
+      "retrieved_articles": [
+        3,
+        3,
+        102,
+        6,
+        11
+      ],
+      "retrieval": {
+        "recall@1": 1.0,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.6309297535714575,
+        "mrr": 1.0,
+        "average_precision": 2.0
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.21052631578947367,
+        "semantic_similarity": 0.8455437421798706,
+        "context_overlap_ratio": 0.26973684210526316
+      }
+    },
+    {
+      "question": "Կարո՞ղ է աշխատանքային պայմանագիրը ուժի մեջ մնալ, եթե այն չի համապատասխանել օրենքի պահանջներին։",
+      "gold_articles": [
+        84
+      ],
+      "retrieved_articles": [
+        59,
+        84,
+        78,
+        105,
+        61
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.6309297535714575,
+        "mrr": 0.5,
+        "average_precision": 0.5
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 5,
+        "hallucinated_citations": 1,
+        "citation_accuracy": 0.8333333333333334,
+        "has_hallucination": true,
+        "citation_hallucination": true,
+        "hallucinated_articles": [
+          108
+        ],
+        "hallucination_count": 1,
+        "hallucination_severity": "low",
+        "f1_score": 0.2764227642276423,
+        "semantic_similarity": 0.8999175429344177,
+        "context_overlap_ratio": 0.3855421686746988
+      }
+    },
+    {
+      "question": "Եթե աշխատանքային հարաբերությունը սխալ է ձևակերպվել քաղաքացիաիրավական պայմանագրով, ո՞ր իրավական նորմերն են կիրառվում։",
+      "gold_articles": [
+        102
+      ],
+      "retrieved_articles": [
+        7,
+        7,
+        116,
+        6,
+        5
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 7,
+        "correct_citations": 7,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.2636363636363636,
+        "semantic_similarity": 0.8607724905014038,
+        "context_overlap_ratio": 0.2974683544303797
+      }
+    },
+    {
+      "question": "Կարո՞ղ է սոցիալական գործընկերության շրջանակում ընդունված համաձայնությունը սահմանափակել անհատ աշխատողի իրավունքները։",
+      "gold_articles": [
+        41,
+        45,
+        39
+      ],
+      "retrieved_articles": [
+        41,
+        25,
+        40,
+        65,
+        39
+      ],
+      "retrieval": {
+        "recall@1": 0.3333333333333333,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 0.3333333333333333,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.46927872602275644,
+        "recall@5": 0.6666666666666666,
+        "precision@5": 0.4,
+        "hit@5": 1,
+        "ndcg@5": 0.6508205185601091,
+        "recall@10": 0.6666666666666666,
+        "precision@10": 0.4,
+        "hit@10": 1,
+        "ndcg@10": 0.6508205185601091,
+        "mrr": 1.0,
+        "average_precision": 0.4666666666666666
+      },
+      "answer": {
+        "cited_count": 8,
+        "correct_citations": 8,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.21739130434782608,
+        "semantic_similarity": 0.92164546251297,
+        "context_overlap_ratio": 0.2125
+      }
+    },
+    {
+      "question": "Կարո՞ղ է կոլեկտիվ պայմանագիրը կիրառվել այն աշխատողների նկատմամբ, ովքեր դրա կնքմանը չեն մասնակցել։",
+      "gold_articles": [
+        19,
+        23,
+        22,
+        55,
+        56
+      ],
+      "retrieved_articles": [
+        111,
+        56,
+        119,
+        55,
+        22
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.2,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.2960819109658652,
+        "recall@5": 0.6,
+        "precision@5": 0.6,
+        "hit@5": 1,
+        "ndcg@5": 0.4912596920895758,
+        "recall@10": 0.6,
+        "precision@10": 0.6,
+        "hit@10": 1,
+        "ndcg@10": 0.4912596920895758,
+        "mrr": 0.5,
+        "average_precision": 0.32
+      },
+      "answer": {
+        "cited_count": 7,
+        "correct_citations": 7,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "100",
+          "51",
+          "49"
+        ],
+        "f1_score": 0.2561576354679803,
+        "semantic_similarity": 0.9011538028717041,
+        "context_overlap_ratio": 0.3401360544217687
+      }
+    },
+    {
+      "question": "Եթե աշխատողը չի բողոքարկել իր իրավունքի խախտումը երկար ժամանակ, արդյո՞ք նա կորցնում է իր իրավունքը։",
+      "gold_articles": [
+        228,
+        30
+      ],
+      "retrieved_articles": [
+        108,
+        229,
+        186,
+        230,
+        230
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "hit@3": 0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "hit@5": 0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "hit@10": 0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0,
+        "average_precision": 0.0
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "30"
+        ],
+        "f1_score": 0.21455938697318008,
+        "semantic_similarity": 0.8940206170082092,
+        "context_overlap_ratio": 0.28402366863905326
+      }
+    },
+    {
+      "question": "Կարո՞ղ է դատարանը կիրառել իրավունքի անալոգիա աշխատողի իրավունքը սահմանափակելու համար։",
+      "gold_articles": [
+        10
+      ],
+      "retrieved_articles": [
+        30,
+        10,
+        8,
+        10,
+        38
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.0616063116448506,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.0616063116448506,
+        "mrr": 0.5,
+        "average_precision": 1.0
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.22127659574468087,
+        "semantic_similarity": 0.9251183271408081,
+        "context_overlap_ratio": 0.29878048780487804
+      }
+    },
+    {
+      "question": "Կարո՞ղ է գործատուն հրաժարվել աշխատողների ներկայացուցիչների հետ բանակցություններից։",
+      "gold_articles": [
+        73,
+        26,
+        67,
+        66
+      ],
+      "retrieved_articles": [
+        26,
+        119,
+        26,
+        71,
+        22
+      ],
+      "retrieval": {
+        "recall@1": 0.25,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 0.25,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 0.7039180890341347,
+        "recall@5": 0.25,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 0.5855700749881525,
+        "recall@10": 0.25,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 0.5855700749881525,
+        "mrr": 1.0,
+        "average_precision": 0.41666666666666663
+      },
+      "answer": {
+        "cited_count": 9,
+        "correct_citations": 9,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.20657276995305165,
+        "semantic_similarity": 0.9178190231323242,
+        "context_overlap_ratio": 0.3841059602649007
+      }
+    },
+    {
+      "question": "Եթե կոլեկտիվ պայմանագիրը հաշվառման չի ներկայացվել, արդյո՞ք այն համարվում է անվավեր։",
+      "gold_articles": [
+        59
+      ],
+      "retrieved_articles": [
+        51,
+        59,
+        59,
+        59,
+        51
+      ],
+      "retrieval": {
+        "recall@1": 0.0,
+        "precision@1": 0.0,
+        "hit@1": 0,
+        "ndcg@1": 0.0,
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "hit@3": 1,
+        "ndcg@3": 1.1309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "hit@5": 1,
+        "ndcg@5": 1.5616063116448506,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "hit@10": 1,
+        "ndcg@10": 1.5616063116448506,
+        "mrr": 0.5,
+        "average_precision": 1.9166666666666665
+      },
+      "answer": {
+        "cited_count": 6,
+        "correct_citations": 6,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": true,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "low",
+        "novel_numbers": [
+          "30"
+        ],
+        "f1_score": 0.2634146341463414,
+        "semantic_similarity": 0.903235137462616,
+        "context_overlap_ratio": 0.3356164383561644
+      }
+    },
+    {
+      "question": "Ինչո՞ւ է աշխատանքային օրենսդրության սկզբունքներին հղում կատարելը կարևոր դատարանի համար։",
+      "gold_articles": [
+        11,
+        10,
+        3
+      ],
+      "retrieved_articles": [
+        3,
+        11,
+        220,
+        3,
+        102
+      ],
+      "retrieval": {
+        "recall@1": 0.3333333333333333,
+        "precision@1": 1.0,
+        "hit@1": 1,
+        "ndcg@1": 1.0,
+        "recall@3": 0.6666666666666666,
+        "precision@3": 0.6666666666666666,
+        "hit@3": 1,
+        "ndcg@3": 0.7653606369886217,
+        "recall@5": 0.6666666666666666,
+        "precision@5": 0.4,
+        "hit@5": 1,
+        "ndcg@5": 0.9674679834891693,
+        "recall@10": 0.6666666666666666,
+        "precision@10": 0.4,
+        "hit@10": 1,
+        "ndcg@10": 0.9674679834891693,
+        "mrr": 1.0,
+        "average_precision": 0.9166666666666666
+      },
+      "answer": {
+        "cited_count": 9,
+        "correct_citations": 9,
+        "hallucinated_citations": 0,
+        "citation_accuracy": 1.0,
+        "has_hallucination": false,
+        "citation_hallucination": false,
+        "hallucinated_articles": [],
+        "hallucination_count": 0,
+        "hallucination_severity": "none",
+        "f1_score": 0.19672131147540986,
+        "semantic_similarity": 0.9104587435722351,
+        "context_overlap_ratio": 0.16666666666666666
+      }
+    }
+  ]
+}

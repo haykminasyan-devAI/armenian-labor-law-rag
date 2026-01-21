@@ -1,0 +1,26 @@
+================================================================================
+QWEN 3 NEXT 80B + HYBRID (NEW CHUNKS) EVALUATION SUMMARY
+================================================================================
+
+RETRIEVAL METRICS:
+  MRR:           0.601
+  Recall@3:      0.608
+  Precision@3:   0.267
+  Hit@3:         0.733
+  NDCG@3:        0.828
+
+ANSWER QUALITY:
+  Citation Accuracy:     0.988
+  Hallucination Count:   0.09
+  Sentence Completion:   8.9%
+
+ANSWER SIMILARITY:
+  F1 Token Score:        0.244
+  Semantic Similarity:   0.885
+
+PERFORMANCE:
+  Total Time:            78.7 minutes
+  Avg per Question:      52.5s
+  Errors:                0/90
+
+================================================================================

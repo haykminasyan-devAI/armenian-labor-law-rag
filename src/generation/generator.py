@@ -50,25 +50,69 @@ class LLMGenerator:
                 api_key=api_key or os.getenv('NVIDIA_API_KEY')
             )
             logger.info(f"✅ Initialized NVIDIA Build client with model: {model_name}")
+        
+        elif provider == "groq":
+            # Initialize Groq API (ultra-fast LPU inference)
+            from openai import OpenAI
+            self.client = OpenAI(
+                base_url="https://api.groq.com/openai/v1",
+                api_key=api_key or os.getenv('GROQ_API_KEY')
+            )
+            logger.info(f"✅ Initialized Groq client with model: {model_name}")
+        
+        elif provider == "google":
+            # Initialize Google Gemini
+            import google.generativeai as genai
+            genai.configure(api_key=api_key or os.getenv('GOOGLE_API_KEY'))
+            self.genai = genai
+            self.gemini_model = genai.GenerativeModel(model_name)
+            logger.info(f"✅ Initialized Google Gemini with model: {model_name}")
         else:
             # Initialize local model
             import torch
             from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
+            import os
+            import warnings
+            
+            # Completely disable progress bars and logging for headless mode
+            os.environ['TRANSFORMERS_VERBOSITY'] = 'error'
+            os.environ['TOKENIZERS_PARALLELISM'] = 'false'
+            os.environ['HF_HUB_DISABLE_PROGRESS_BARS'] = '1'
+            warnings.filterwarnings('ignore')
+            
+            # Disable transformers logging
+            import transformers
+            transformers.logging.set_verbosity_error()
             
             logger.info(f"Loading local model: {model_name}")
+            
+            # Check GPU availability
+            if torch.cuda.is_available():
+                logger.info("✅ GPU detected! Loading model on GPU...")
+                device = "cuda:0"
+                device_map = "auto"
+            else:
+                logger.warning("⚠️  No GPU detected! Using CPU (will be slow)...")
+                device = "cpu"
+                device_map = None
+            
             logger.info("This may take a few minutes on first run...")
             
-            # Load tokenizer
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+            # Load tokenizer (quietly)
+            self.tokenizer = AutoTokenizer.from_pretrained(
+                model_name,
+                use_fast=True
+            )
             if self.tokenizer.pad_token is None:
                 self.tokenizer.pad_token = self.tokenizer.eos_token
             
-            # Load model with GPU support
+            # Load model with GPU support (completely silent)
             self.model = AutoModelForCausalLM.from_pretrained(
                 model_name,
-                torch_dtype=torch.float16,
-                device_map=device,
-                low_cpu_mem_usage=True
+                torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+                device_map=device_map if device_map else device,
+                low_cpu_mem_usage=True,
+                use_safetensors=True
             )
             
             # Create pipeline
@@ -99,8 +143,19 @@ class LLMGenerator:
             Generated text
         """
         try:
-            if self.provider in ["openai", "nvidia"]:
-                # OpenAI or NVIDIA Build API
+            if self.provider == "google":
+                # Google Gemini API
+                response = self.gemini_model.generate_content(
+                    prompt,
+                    generation_config={
+                        'max_output_tokens': kwargs.get('max_tokens', self.max_tokens),
+                        'temperature': kwargs.get('temperature', self.temperature)
+                    }
+                )
+                answer = response.text.strip()
+                
+            elif self.provider in ["openai", "nvidia", "groq"]:
+                # OpenAI, NVIDIA Build, or Groq API
                 response = self.client.chat.completions.create(
                     model=self.model_name,
                     messages=[
