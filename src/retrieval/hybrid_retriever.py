@@ -266,3 +266,7 @@ class HybridRetriever(BaseRetriever):
         
         self.is_indexed = True
         logger.info(f"✅ Hybrid index loaded from {path}")
+
+    def warmup(self):
+        """Pre-load dense embedding model used by hybrid search."""
+        self.dense_retriever.warmup()

@@ -5,9 +5,19 @@ Modern ChatGPT-style Web Interface for Armenian Labor Law Q&A
 
 import sys
 import json
+import os
+import logging
 from pathlib import Path
 import streamlit as st
 from datetime import datetime
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).parent.parent / ".env")
+except ImportError:
+    pass
+
+logger = logging.getLogger(__name__)
 
 # Add project root to path
 project_root = Path(__file__).parent.parent
@@ -133,6 +143,8 @@ if 'show_sources' not in st.session_state:
     st.session_state.show_sources = True
 if 'show_scores' not in st.session_state:
     st.session_state.show_scores = False
+if 'pending_question' not in st.session_state:
+    st.session_state.pending_question = None
 
 # Sidebar - Chat History + New Conversation
 with st.sidebar:
@@ -207,64 +219,86 @@ elif "3.3" in model_choice or "Fastest" in model_choice:
 else:
     generation_model = "70B"
 
+def _get_nvidia_api_key() -> str:
+    """Prefer NVIDIA_API_KEY from environment (.env or export)."""
+    key = os.getenv("NVIDIA_API_KEY")
+    if key:
+        return key
+    raise ValueError(
+        "NVIDIA_API_KEY is not set. Run: export NVIDIA_API_KEY='nvapi-...' "
+        "or add it to a .env file in the project root."
+    )
+
+
 # Load RAG pipeline (cached)
 @st.cache_resource
 def load_rag_pipeline(retrieval_method, generation_model):
     """Load RAG pipeline (cached)."""
-    import os
     os.environ['TRANSFORMERS_VERBOSITY'] = 'error'
     os.environ['TOKENIZERS_PARALLELISM'] = 'false'
     
-    # Load hybrid chunks (token-optimized)
     chunks_file = project_root / "data" / "chunks" / "labor_law_chunks_hybrid.json"
+    if not chunks_file.exists():
+        raise FileNotFoundError(
+            f"Missing chunks file: {chunks_file}\n"
+            "Run: python scripts/extract_pdf.py && python scripts/preprocess_data.py "
+            "&& python scripts/create_hybrid_chunks.py"
+        )
     with open(chunks_file, 'r', encoding='utf-8') as f:
         chunks = json.load(f)
     
-    # Initialize retriever with hybrid indices
     if "BM25" in retrieval_method:
         retriever = BM25Retriever(chunks)
         retriever.load_index(str(project_root / "data" / "indices" / "bm25_hybrid" / "bm25_index.pkl"))
     elif "Dense" in retrieval_method:
         retriever = DenseRetriever(chunks)
         retriever.load_index(str(project_root / "data" / "indices" / "dense_hybrid"))
-    else:  # Hybrid
+        retriever.warmup()
+    else:
         retriever = HybridRetriever(chunks, bm25_weight=0.5, dense_weight=0.5)
         retriever.load_index(str(project_root / "data" / "indices" / "hybrid_v2"))
+        retriever.warmup()
     
-    # Initialize generator (NVIDIA only)
     if generation_model == "405B":
         model_name = "meta/llama-3.1-405b-instruct"
         max_tokens = 2000
-        api_key = "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"
     elif generation_model == "DeepSeek":
         model_name = "deepseek-ai/deepseek-v3.1"
         max_tokens = 2000
-        api_key = "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"
     elif generation_model == "Qwen":
         model_name = "qwen/qwen3-next-80b-a3b-instruct"
         max_tokens = 6000
-        api_key = "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"
     elif "3.3" in generation_model or "Fastest" in generation_model:
         model_name = "meta/llama-3.3-70b-instruct"
-        max_tokens = 1000
-        api_key = "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"
+        max_tokens = 2000
     else:
         model_name = "meta/llama-3.1-70b-instruct"
-        max_tokens = 1000
-        api_key = "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"
+        max_tokens = 2000
     
     generator = LLMGenerator(
         model_name=model_name,
         provider="nvidia",
-        api_key=api_key,
+        api_key=_get_nvidia_api_key(),
         max_tokens=max_tokens,
         temperature=0.1
     )
     
     return RAGPipeline(retriever=retriever, generator=generator)
 
-# Load pipeline
-rag_pipeline = load_rag_pipeline(retrieval_method, generation_model)
+
+try:
+    with st.spinner("Բեռնում եմ գիտելիքի բազան և embedding մոդելը (առաջին անգամ 1–2 րոպե)..."):
+        rag_pipeline = load_rag_pipeline(retrieval_method, generation_model)
+except FileNotFoundError as e:
+    st.error(str(e))
+    st.stop()
+except ValueError as e:
+    st.error(str(e))
+    st.stop()
+except Exception as e:
+    st.error(f"Չհաջողվեց բեռնել RAG pipeline: {e}")
+    st.exception(e)
+    st.stop()
 
 # Main header
 st.markdown('<h1 class="big-title">🇦🇲 Հայաստանի Աշխատանքային Օրենսգիրք</h1>', unsafe_allow_html=True)
@@ -293,14 +327,15 @@ with chat_container:
             st.markdown(answer_html, unsafe_allow_html=True)
             
             # Show clickable article sources
-            if "sources" in message and show_sources:
+            sources = message.get("sources") or []
+            if show_sources and sources:
                 st.markdown("**📚 Աղբյուրներ:**")
                 
-                # Create columns for article buttons
-                cols = st.columns(min(len(message["sources"]), 3))
+                num_cols = min(len(sources), 3)
+                cols = st.columns(num_cols)
                 
-                for idx, art_num in enumerate(message["sources"][:5]):
-                    with cols[idx % 3]:
+                for idx, art_num in enumerate(sources[:5]):
+                    with cols[idx % num_cols]:
                         # Clickable button for each article
                         if st.button(
                             f"📄 Հոդված {art_num}",
@@ -315,10 +350,12 @@ with chat_container:
                                             st.markdown(chunk['text'])
                                         break
             
-            if show_scores and "scores" in message:
+            scores = message.get("scores") or []
+            msg_sources = message.get("sources") or []
+            if show_scores and scores and msg_sources:
                 st.markdown("**🎯 Relevance Scores:**")
-                cols = st.columns(len(message["scores"]))
-                for i, (art, score) in enumerate(zip(message["sources"], message["scores"])):
+                cols = st.columns(len(scores))
+                for i, (art, score) in enumerate(zip(msg_sources, scores)):
                     with cols[i]:
                         st.metric(f"Հոդված {art}", f"{score:.2f}", delta=f"#{i+1}")
 
@@ -387,18 +424,7 @@ with st.expander("➕ Models & Settings", expanded=False):
     st.session_state.top_k = st.slider("Articles to retrieve", 1, 10, st.session_state.top_k)
     st.session_state.show_sources = st.checkbox("Show sources", st.session_state.show_sources)
 
-# Input box
-question = st.text_input(
-    "💬 Message",
-    placeholder="Հարցրեք Աշխատանքային Օրենսգրքի մասին...",
-    label_visibility="collapsed",
-    key="question_input"
-)
-
-# Send button
-send_button = st.button("📤 Send", use_container_width=True, type="primary")
-
-# Example questions
+# Example questions (set pending question, then rerun)
 with st.expander("💡 Օրինակ հարցեր (սեղմեք օգտագործելու համար)"):
     example_questions = [
         "Քանի՞ արձակուրդային օր կա։",
@@ -407,55 +433,72 @@ with st.expander("💡 Օրինակ հարցեր (սեղմեք օգտագործ�
         "Որո՞նք են նվազագույն աշխատավարձի կանոնները։",
         "Ի՞նչ է ասում Հոդված 145-րդը։"
     ]
-    
     cols = st.columns(2)
     for i, example in enumerate(example_questions):
         with cols[i % 2]:
             if st.button(example, key=f"ex_{i}", use_container_width=True):
-                question = example
-                send_button = True
+                st.session_state.pending_question = example
+                st.rerun()
 
-# Process question (only on button click, not on every rerun)
-if send_button and question:
-    # Add user message to history
-    st.session_state.messages.append({"role": "user", "content": question})
-    
-    # Generate response
-    with st.spinner('🔍 Փնտրում եմ և վերլուծում եմ...'):
+# Chat form (Enter key submits)
+with st.form("chat_form", clear_on_submit=True):
+    question = st.text_input(
+        "💬 Message",
+        placeholder="Հարցրեք Աշխատանքային Օրենսգրքի մասին...",
+        label_visibility="collapsed",
+    )
+    send_button = st.form_submit_button("📤 Send", use_container_width=True, type="primary")
+
+# Resolve which question to process this run
+question_to_ask = None
+if st.session_state.pending_question:
+    question_to_ask = st.session_state.pending_question.strip()
+    st.session_state.pending_question = None
+elif send_button and question:
+    question_to_ask = question.strip()
+
+if question_to_ask:
+    st.session_state.messages.append({"role": "user", "content": question_to_ask})
+
+    with st.spinner('🔍 Փնտրում եմ հոդվածները և գեներացնում պատասխանը (30–90 վրկ)...'):
         try:
-            # Try to get answer
             result = rag_pipeline.answer_question(
-                question,
+                question_to_ask,
                 top_k=top_k,
                 return_context=True
             )
-            
-            # Add assistant message to history (with article texts)
+
             st.session_state.messages.append({
                 "role": "assistant",
                 "content": result['answer'],
-                "sources": result['article_numbers'][:top_k],
-                "scores": result['scores'][:top_k],
+                "sources": result.get('article_numbers', [])[:top_k],
+                "scores": result.get('scores', [])[:top_k],
                 "retrieved_chunks": result.get('retrieved_chunks', []),
                 "timestamp": datetime.now().strftime("%H:%M")
             })
-            
-            # Rerun to show new messages
             st.rerun()
-            
+
         except Exception as e:
             error_msg = str(e)
-            
-            # Specific handling for DeepSeek meta tensor error
+            logger.exception("Error in RAG pipeline")
+
             if "meta tensor" in error_msg or "to_empty" in error_msg:
-                st.error("❌ DeepSeek model temporarily unavailable. Please select Llama 70B or 405B.")
-                st.info("💡 DeepSeek works in CLI: `python interface/chatbot.py --model deepseek`")
+                err_display = "DeepSeek model temporarily unavailable. Please select Llama or Qwen."
+            elif "NVIDIA_API_KEY" in error_msg or "api_key" in error_msg.lower() or "401" in error_msg:
+                err_display = f"API key error: {error_msg}. Set export NVIDIA_API_KEY='nvapi-...'"
             else:
-                st.error(f"❌ Սխալ: {e}")
-            
-            # Log error but don't crash
-            import logging
-            logging.error(f"Error in RAG pipeline: {e}")
+                err_display = error_msg
+
+            st.session_state.messages.append({
+                "role": "assistant",
+                "content": f"❌ Սխալ: {err_display}",
+                "sources": [],
+                "scores": [],
+                "retrieved_chunks": [],
+                "timestamp": datetime.now().strftime("%H:%M")
+            })
+            st.error(f"❌ {err_display}")
+            st.rerun()
 
 # Footer
 st.markdown("---")

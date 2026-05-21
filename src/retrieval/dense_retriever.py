@@ -154,3 +154,12 @@ class DenseRetriever(BaseRetriever):
         
         self.is_indexed = True
         logger.info(f"Dense index loaded from {path}")
+
+    def warmup(self):
+        """Pre-load embedding model so the first user query is not delayed."""
+        if not self.is_indexed:
+            raise ValueError("Index not built. Call build_index() or load_index() first.")
+        if self.model is None:
+            logger.info(f"Pre-loading embedding model: {self.model_name}")
+            self.model = SentenceTransformer(self.model_name)
+            logger.info("✅ Embedding model ready")
